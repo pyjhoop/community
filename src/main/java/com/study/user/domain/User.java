@@ -1,4 +1,6 @@
-package user.domain;
+package com.study.user.domain;
+
+import com.study.common.domain.PositiveIntegerCounter;
 
 import java.util.Objects;
 
@@ -6,14 +8,14 @@ public class User {
 
     private final Long id;
     private final UserInfo userInfo;
-    private final UserRelationCounter followingCount;
-    private final UserRelationCounter followerCount;
+    private final PositiveIntegerCounter followingCount;
+    private final PositiveIntegerCounter followerCount;
 
     public User(Long id, UserInfo userInfo) {
         this.id = id;
         this.userInfo = userInfo;
-        this.followerCount = new UserRelationCounter();
-        this.followingCount = new UserRelationCounter();
+        this.followerCount = new PositiveIntegerCounter();
+        this.followingCount = new PositiveIntegerCounter();
     }
 
     public void follow(User targetUser){

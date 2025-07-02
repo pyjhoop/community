@@ -1,4 +1,4 @@
-package user.domain;
+package com.study.user.domain;
 
 public class UserInfo {
 
